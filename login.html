@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ECO WEAR</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+ <body>
+    <section id="header">
+        <a href="#"><img src="Image/black transparent.png" class="logo" alt="">
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="trade.html">Trade-in</a></li>
+                <li><a href="buy.html">Buy Used</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                <li><a class ="active"href="login.html">Login/Sign Up</a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+                
+
+            </ul>
+        </div>
+        <div id="mobile">
+            <li><a class ="active"href="login.html">Login/Sign Up</a></li>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    
+        
+   
+    <section id="login-body" class="section-p1">
+      <div class="login-container">
+        <div class="tabs">
+          <button class="tab" onclick="showForm('login')">Login</button>
+          <button class="tab" onclick="showForm('signup')">Signup</button>
+        </div>
+    
+        <form class="login-form">
+          <h2>Login</h2>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+    
+          <div class="form-group">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+    
+        <form class="signup-form">
+          <h2>Signup</h2>
+          <div class="form-group">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="signup-username" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" required>
+          </div>
+    
+          <div class="form-group">
+            <button type="submit">Signup</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <script>
+        function showForm(formType) {
+          const loginForm = document.querySelector('.login-form');
+          const signupForm = document.querySelector('.signup-form');
+          const loginTab = document.querySelector('.tab:nth-child(1)');
+          const signupTab = document.querySelector('.tab:nth-child(2)');
+    
+          if (formType === 'login') {
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            loginTab.classList.add('active-tab');
+            signupTab.classList.remove('active-tab');
+          } else if (formType === 'signup') {
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+            loginTab.classList.remove('active-tab');
+            signupTab.classList.add('active-tab');
+          }
+        }  
+    </script>
+    
+  </body>
