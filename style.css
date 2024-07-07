@@ -190,6 +190,12 @@ body {
     top: 15px;
     position: relative;
 }
+.small{
+    flex-basis: 24%;
+    width:15%;
+    bottom: 15px;
+    text-align: center;
+}
 a{
     text-decoration: none;
     color: #0066c0;
